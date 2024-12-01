@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestand Uploaden - AntiSec Antivirus</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome voor iconen -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-papvo1kZyj8ykj+SpDm+KgK5rjV4cXtDvGZQZ5e5VX2mQ+5b3C1Oq0J3nD6p1RHTCQ8blV9e8bA5uSbXv3JfHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="AntiSec Antivirus Logo" />
+          </a>
+          <!-- Optioneel: Behoud van de tekstuele logo naast het beeldlogo -->
+          <!--
+                <h1>🛡️ AntiSec Antivirus</h1>
+                -->
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Upload Sectie -->
+    <section class="upload-section">
+      <div class="container">
+        <h2>Test je Bestand</h2>
+        <p>
+          Upload hier een bestand om het te scannen op virussen en malware. Ons
+          systeem zorgt ervoor dat je bestanden veilig zijn voordat je ze opent.
+        </p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+          <div class="form-group">
+            <label for="file">Kies een bestand:</label>
+            <input type="file" id="file" name="file" required />
+          </div>
+          <button type="submit" class="btn-primary">
+            Uploaden en Controleren
+          </button>
+        </form>
+        <!-- Hier kun je later de resultaten van de scan tonen -->
+        <!-- Bijvoorbeeld:
+            <div class="result">
+                <h3>Resultaat:</h3>
+                <p>Bestand is veilig.</p>
+            </div>
+            -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 AntiSec. Alle rechten voorbehouden.</p>
+      </div>
+    </footer>
+  </body>
+</html>

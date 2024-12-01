@@ -6,7 +6,7 @@
     <title>AntiSec Antivirus</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <!-- Font Awesome voor iconen -->
@@ -23,7 +23,13 @@
     <header class="header">
       <div class="container">
         <div class="logo">
+          <a href="#home">
+            <img src="images/logo.png" alt="AntiSec Antivirus Logo" />
+          </a>
+          <!-- Optioneel: Behoud van de tekstuele logo naast het beeldlogo -->
+          <!--
           <h1>🛡️ AntiSec Antivirus</h1>
+          -->
         </div>
         <nav class="navbar">
           <ul>
@@ -31,8 +37,9 @@
             <li><a href="#features">Features</a></li>
             <li><a href="#how-it-works">Hoe het Werkt</a></li>
             <li><a href="#download">Download</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <!-- "Download Nu" vervangen door "Test Nu" -->
           </ul>
         </nav>
       </div>
@@ -45,15 +52,12 @@
           <h2>Bescherm Jouw Digitale Wereld</h2>
           <p>
             Met AntiSec Antivirus ben je veilig tegen de nieuwste virussen en
-            malware.
+            malware. Snel, efficiënt en betrouwbaar.
           </p>
-          <a href="#download" class="btn-primary">Download Nu</a>
-        </div>
-        <div class="hero-image">
-          <img
-            src="https://www.example.com/your-hero-image.png"
-            alt="AntiSec Antivirus"
-          />
+          <div class="hero-buttons">
+            <a href="upload.html" class="btn-test">Test Nu</a>
+            <!-- "Download Nu" vervangen door "Test Nu" -->
+          </div>
         </div>
       </div>
     </section>
@@ -88,7 +92,7 @@
             </p>
           </div>
           <div class="feature-item">
-            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-sync-alt"></i>
             <h3>Automatische Updates</h3>
             <p>
               Blijf beschermd met regelmatige updates tegen de nieuwste virussen
@@ -125,7 +129,6 @@
       </div>
     </section>
 
-    <!-- Download Sectie -->
     <section id="download" class="download-section">
       <div class="container">
         <h2>Download AntiSec Antivirus</h2>
@@ -134,58 +137,6 @@
           om te beginnen!
         </p>
         <a href="ANTIVURS/download/anti.py" class="btn-primary">Download Nu</a>
-      </div>
-    </section>
-
-    <!-- Testimonials Sectie -->
-    <section id="testimonials" class="testimonials-section">
-      <div class="container">
-        <h2>Wat Onze Gebruikers Zeggen</h2>
-        <div class="testimonials-grid">
-          <div class="testimonial-item">
-            <p>
-              "Sinds ik AntiSec gebruik, voel ik me veel veiliger online. De
-              realtime bescherming werkt perfect!"
-            </p>
-            <h4>— Jan S.</h4>
-          </div>
-          <div class="testimonial-item">
-            <p>
-              "De bestandsscanner is zeer efficiënt en snel. Ik waardeer de
-              automatische updates enorm."
-            </p>
-            <h4>— Lisa M.</h4>
-          </div>
-          <div class="testimonial-item">
-            <p>
-              "AntiSec biedt betrouwbare bescherming zonder mijn systeem te
-              vertragen. Echt een aanrader!"
-            </p>
-            <h4>— Mark D.</h4>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Sectie -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2>Contacteer Ons</h2>
-        <form action="submit_form.php" method="POST">
-          <div class="form-group">
-            <label for="naam">Naam</label>
-            <input type="text" id="naam" name="naam" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="bericht">Bericht</label>
-            <textarea id="bericht" name="bericht" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn-primary">Verzend Bericht</button>
-        </form>
       </div>
     </section>
 

@@ -1,0 +1,87 @@
+/* Upload Sectie */
+.upload-section {
+  background: #252839;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.upload-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.upload-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.upload-section form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  background: #333344;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.upload-section .form-group {
+  margin-bottom: 20px;
+}
+
+.upload-section .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.upload-section .form-group input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #555566;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.upload-section .form-group input[type="file"]:focus {
+  background: #666677;
+  outline: none;
+}
+
+.upload-section button {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.upload-section button:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Resultaat Blok (optioneel) */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background: #555566;
+  border-radius: 10px;
+}
+
+.result h3 {
+  color: #4caf50;
+}
+
+.result p {
+  color: #e0e0e0;
+}

@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Algemene Stijlen */
 * {
   margin: 0;
@@ -8,9 +6,9 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #ffffff;
-  background-color: #121212;
+  background-color: #1b1b1f;
   line-height: 1.6;
 }
 
@@ -24,22 +22,45 @@ body {
 
 /* Header */
 .header {
-  background: #1f1c2c;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
   padding: 20px 0;
-  position: sticky;
-  top: 0;
+  position: relative; /* Zorgt dat absolute posities binnen header worden berekend */
   z-index: 1000;
-  animation: slideDown 0.5s ease-out;
 }
 
+/* Logo */
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px; /* Vergroot de hoogte van het logo */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 15px; /* Voeg border-radius toe voor afgeronde hoeken */
+}
+
+/* Optioneel: Verberg de tekstuele logo als je alleen het beeldlogo wilt gebruiken */
 .logo h1 {
-  font-size: 1.8em;
-  color: #ffffff;
-  display: inline;
+  display: none;
 }
 
+/* Navigatiebalk */
 .navbar {
-  float: right;
+  position: absolute; /* Positioneert de navigatie absoluut binnen de header */
+  right: 20px; /* Plaatst de navigatie 20px vanaf de rechterkant */
+  top: 50%; /* Verticaal centreert de navigatie */
+  transform: translateY(-50%); /* Corrigeert de verticale uitlijning */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Lichte achtergrondkleur voor contrast */
+  padding: 10px 20px; /* Voeg wat padding toe */
+  border-radius: 10px; /* Rond de hoeken van de navigatiebalk af */
 }
 
 .navbar ul {
@@ -53,60 +74,80 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000000; /* Donkere kleur voor de tekst */
   font-weight: 600;
   transition: color 0.3s;
   position: relative;
-}
-
-.navbar ul li a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #4caf50;
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: width 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
 }
 
 .navbar ul li a:hover {
-  color: #4caf50;
+  color: #72b4e0; /* Verander de kleur bij hover */
+  background-color: rgba(
+    114,
+    180,
+    224,
+    0.2
+  ); /* Voeg een lichte achtergrondkleur toe bij hover */
 }
 
-.navbar ul li a:hover::after {
-  width: 100%;
+/* Nieuwe "Test Nu" knop in de navigatie */
+.navbar ul li a.btn-test {
+  background-color: #4caf50; /* Groene achtergrondkleur */
+  color: #ffffff; /* Witte tekstkleur */
+}
+
+.navbar ul li a.btn-test:hover {
+  background-color: #45a049; /* Donkere groene kleur bij hover */
+  color: #ffffff;
 }
 
 /* Hero Sectie */
 .hero-section {
-  background-color: #282c34;
+  background: linear-gradient(to bottom, #1f1c2c, #928dab);
   color: #ffffff;
-  padding: 100px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  animation: fadeIn 1.5s ease-out;
-}
-
-.hero-content {
-  max-width: 50%;
-  animation: slideInLeft 1s ease-out;
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
 }
 
 .hero-content h2 {
-  font-size: 2.5em;
+  font-size: 2.8em;
   margin-bottom: 20px;
   color: #4caf50;
 }
 
 .hero-content p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   margin-bottom: 30px;
-  color: #cccccc;
+  color: #e0e0e0;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Nieuwe "Test Nu" knop in Hero Sectie */
+.hero-buttons a.btn-test {
+  background-color: #ff5722; /* Oranje kleur voor "Test Nu" knop */
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons a.btn-test:hover {
+  background-color: #e64a19; /* Donkerder oranje bij hover */
+  transform: translateY(-5px);
+}
+
+/* Btn-primary Stijlen */
 .btn-primary {
   background: #4caf50;
   color: #ffffff;
@@ -121,22 +162,13 @@ body {
 .btn-primary:hover {
   background: #45a049;
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  animation: zoomIn 1.5s ease-out;
 }
 
 /* Features Sectie */
 .features-section {
-  background: #1f1c2c;
+  background: #1b1b1f;
   padding: 60px 0;
   text-align: center;
-  animation: fadeInUp 1s ease-out;
 }
 
 .features-section h2 {
@@ -152,28 +184,21 @@ body {
 }
 
 .feature-item {
-  background: #282c34;
+  background: linear-gradient(to bottom, #333333, #444444);
   padding: 30px;
   border-radius: 10px;
-  transition: transform 0.3s, background 0.3s;
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-item:hover {
-  transform: scale(1.05);
-  background: #3a3f51;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .feature-item i {
   font-size: 3em;
-  color: #4caf50;
+  color: #72b4e0;
   margin-bottom: 20px;
-  transition: color 0.3s;
-}
-
-.feature-item:hover i {
-  color: #81c784;
 }
 
 .feature-item h3 {
@@ -184,21 +209,20 @@ body {
 
 .feature-item p {
   font-size: 1em;
-  color: #cccccc;
+  color: #e0e0e0;
 }
 
 /* Hoe het Werkt Sectie */
 .how-it-works-section {
-  background: #1f1c2c;
+  background: #252839;
   padding: 60px 0;
   text-align: center;
-  animation: fadeIn 1.5s ease-out;
 }
 
 .how-it-works-section h2 {
   font-size: 2em;
   margin-bottom: 40px;
-  color: #4caf50;
+  color: #72b4e0;
 }
 
 .steps-grid {
@@ -208,28 +232,21 @@ body {
 }
 
 .step-item {
-  background: #282c34;
+  background: #333344;
   padding: 30px;
   border-radius: 10px;
-  transition: transform 0.3s, background 0.3s;
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .step-item:hover {
-  transform: scale(1.05);
-  background: #3a3f51;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .step-item i {
   font-size: 3em;
   color: #4caf50;
   margin-bottom: 20px;
-  transition: color 0.3s;
-}
-
-.step-item:hover i {
-  color: #81c784;
 }
 
 .step-item h3 {
@@ -243,13 +260,11 @@ body {
   color: #cccccc;
 }
 
-/* Download Sectie */
 .download-section {
-  background: #4caf50;
+  background: linear-gradient(to right, #4caf50, #2c3e50);
   color: #ffffff;
   padding: 60px 0;
   text-align: center;
-  animation: fadeInUp 1s ease-out;
 }
 
 .download-section h2 {
@@ -274,63 +289,105 @@ body {
 }
 
 .download-section .btn-primary:hover {
-  background: #45a049;
+  background: #333333;
   color: #ffffff;
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
+*/
 
-/* Testimonials Sectie */
-.testimonials-section {
-  background: #1f1c2c;
+/* Upload Sectie */
+.upload-section {
+  background: #252839;
   padding: 60px 0;
   text-align: center;
-  animation: fadeIn 1.5s ease-out;
 }
 
-.testimonials-section h2 {
+.upload-section h2 {
   font-size: 2em;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #4caf50;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+.upload-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #e0e0e0;
 }
 
-.testimonial-item {
-  background: #282c34;
+.upload-section form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  background: #333344;
   padding: 30px;
   border-radius: 10px;
-  transition: transform 0.3s, background 0.3s;
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.testimonial-item:hover {
-  transform: scale(1.05);
-  background: #3a3f51;
-}
-
-.testimonial-item p {
-  font-style: italic;
-  color: #cccccc;
+.upload-section .form-group {
   margin-bottom: 20px;
 }
 
-.testimonial-item h4 {
+.upload-section .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.upload-section .form-group input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #555566;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.upload-section .form-group input[type="file"]:focus {
+  background: #666677;
+  outline: none;
+}
+
+.upload-section button {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
   font-weight: bold;
+}
+
+.upload-section button:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Resultaat Blok (optioneel) */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background: #555566;
+  border-radius: 10px;
+}
+
+.result h3 {
   color: #4caf50;
+}
+
+.result p {
+  color: #e0e0e0;
 }
 
 /* Contact Sectie */
 .contact-section {
-  background: #1f1c2c;
+  background: #252839;
   padding: 60px 0;
   text-align: center;
-  animation: fadeInUp 1s ease-out;
 }
 
 .contact-section h2 {
@@ -343,42 +400,37 @@ body {
   max-width: 600px;
   margin: auto;
   text-align: left;
-  background: #282c34;
+  background: #333344;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background 0.3s;
 }
 
-.contact-section form:hover {
-  background: #3a3f51;
-}
-
-.form-group {
+.contact-section .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.contact-section .form-group label {
   display: block;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
-.form-group input,
-.form-group textarea {
+.contact-section .form-group input,
+.contact-section .form-group textarea {
   width: 100%;
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
   font-size: 1em;
-  background: #4b5363;
+  background: #444455;
   color: #ffffff;
   transition: background 0.3s, color 0.3s;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  background: #5a6473;
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
+  background: #555566;
   outline: none;
 }
 
@@ -401,22 +453,54 @@ body {
 
 /* Footer */
 footer {
-  background: #1f1c2c;
+  background: #2c3e50;
   color: #ffffff;
   padding: 20px 0;
   text-align: center;
-  animation: slideUp 0.5s ease-out;
 }
 
 footer .social-links a {
   color: #ffffff;
   margin: 0 10px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   transition: color 0.3s;
 }
 
 footer .social-links a:hover {
-  color: #4caf50;
+  color: #72b4e0;
+}
+
+/* Test Nu knop (in navigatie en hero sectie) */
+.btn-test {
+  background-color: #4caf50; /* Groene achtergrondkleur */
+  color: #ffffff; /* Witte tekstkleur */
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-test:hover {
+  background-color: #45a049; /* Donkere groene kleur bij hover */
+  transform: translateY(-2px);
+}
+
+/* Hero Sectie knoppen */
+.hero-buttons a.btn-test {
+  background-color: #ff5722; /* Oranje kleur voor "Test Nu" knop */
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons a.btn-test:hover {
+  background-color: #e64a19; /* Donkerder oranje bij hover */
+  transform: translateY(-5px);
 }
 
 /* Animaties */
@@ -429,71 +513,16 @@ footer .social-links a:hover {
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 /* Responsief Ontwerp */
 @media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .hero-image img {
-    max-width: 100%;
-    margin-top: 30px;
+  /* Verwijder absolute positionering voor betere responsiviteit */
+  .navbar {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    background-color: transparent; /* Maak achtergrond transparant op kleine schermen */
+    padding: 0;
+    border-radius: 0;
   }
 
   .navbar ul {
@@ -502,12 +531,28 @@ footer .social-links a:hover {
   }
 
   .navbar ul li {
-    margin: 10px 0;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 
   .features-grid,
   .steps-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Aanpassing voor het logo op kleinere schermen */
+  .logo img {
+    height: 60px; /* Verklein het logo op kleinere schermen */
+  }
+
+  /* Aanpassingen voor de Hero Sectie knoppen */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons a.btn-test {
+    width: 100%;
   }
 }
