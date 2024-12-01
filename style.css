@@ -1,0 +1,553 @@
+/* Algemene Stijlen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #1b1b1f;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  padding: 20px 0;
+  position: relative; /* Zorgt dat absolute posities binnen header worden berekend */
+  z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100px; /* Vergroot de hoogte van het logo */
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 15px; /* Voeg border-radius toe voor afgeronde hoeken */
+}
+
+/* Optioneel: Verberg de tekstuele logo als je alleen het beeldlogo wilt gebruiken */
+.logo h1 {
+  display: none;
+}
+
+/* Navigatiebalk */
+.navbar {
+  position: absolute; /* Positioneert de navigatie absoluut binnen de header */
+  right: 20px; /* Plaatst de navigatie 20px vanaf de rechterkant */
+  top: 50%; /* Verticaal centreert de navigatie */
+  transform: translateY(-50%); /* Corrigeert de verticale uitlijning */
+  /* Lichte achtergrondkleur voor contrast */
+  padding: 10px 20px; /* Voeg wat padding toe */
+  /* Rond de hoeken van de navigatiebalk af */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: wheat; /* Donkere kleur voor de tekst */
+  font-weight: 600;
+  transition: color 0.3s;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  color: #72b4e0; /* Verander de kleur bij hover */
+  background-color: rgba(
+    114,
+    180,
+    224,
+    0.2
+  ); /* Voeg een lichte achtergrondkleur toe bij hover */
+}
+
+/* Nieuwe "Test Nu" knop in de navigatie */
+.navbar ul li a.btn-test {
+  background-color: #4caf50; /* Groene achtergrondkleur */
+  color: #ffffff; /* Witte tekstkleur */
+}
+
+.navbar ul li a.btn-test:hover {
+  background-color: #45a049; /* Donkere groene kleur bij hover */
+  color: #ffffff;
+}
+
+/* Hero Sectie */
+.hero-section {
+  background: linear-gradient(to bottom, #1f1c2c, #928dab);
+  color: #ffffff;
+  padding: 100px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-content h2 {
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.hero-content p {
+  font-size: 1.3em;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Nieuwe "Test Nu" knop in Hero Sectie */
+.hero-buttons a.btn-test {
+  background-color: #ff5722; /* Oranje kleur voor "Test Nu" knop */
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons a.btn-test:hover {
+  background-color: #e64a19; /* Donkerder oranje bij hover */
+  transform: translateY(-5px);
+}
+
+/* Btn-primary Stijlen */
+.btn-primary {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+  background: #45a049;
+  transform: translateY(-5px);
+}
+
+/* Features Sectie */
+.features-section {
+  background: #1b1b1f;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #4caf50;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature-item {
+  background: linear-gradient(to bottom, #333333, #444444);
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.feature-item i {
+  font-size: 3em;
+  color: #72b4e0;
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.feature-item p {
+  font-size: 1em;
+  color: #e0e0e0;
+}
+
+/* Hoe het Werkt Sectie */
+.how-it-works-section {
+  background: #252839;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.how-it-works-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #72b4e0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.step-item {
+  background: #333344;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.step-item i {
+  font-size: 3em;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.step-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.step-item p {
+  font-size: 1em;
+  color: #cccccc;
+}
+
+.download-section {
+  background: linear-gradient(to right, #4caf50, #2c3e50);
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.download-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.download-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.download-section .btn-primary {
+  background: #ffffff;
+  color: #4caf50;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.download-section .btn-primary:hover {
+  background: #333333;
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+*/
+
+/* Upload Sectie */
+.upload-section {
+  background: #252839;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.upload-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.upload-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #e0e0e0;
+}
+
+.upload-section form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  background: #333344;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.upload-section .form-group {
+  margin-bottom: 20px;
+}
+
+.upload-section .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.upload-section .form-group input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #555566;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.upload-section .form-group input[type="file"]:focus {
+  background: #666677;
+  outline: none;
+}
+
+.upload-section button {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.upload-section button:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Resultaat Blok (optioneel) */
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  background: #555566;
+  border-radius: 10px;
+}
+
+.result h3 {
+  color: #4caf50;
+}
+
+.result p {
+  color: #e0e0e0;
+}
+
+/* Contact Sectie */
+.contact-section {
+  background: #252839;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #4caf50;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  background: #333344;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-section .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.contact-section .form-group input,
+.contact-section .form-group textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #444455;
+  color: #ffffff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.contact-section .form-group input:focus,
+.contact-section .form-group textarea:focus {
+  background: #555566;
+  outline: none;
+}
+
+.contact-section button {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.contact-section button:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .social-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #72b4e0;
+}
+
+/* Test Nu knop (in navigatie en hero sectie) */
+.btn-test {
+  background-color: #4caf50; /* Groene achtergrondkleur */
+  color: #ffffff; /* Witte tekstkleur */
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-test:hover {
+  background-color: #45a049; /* Donkere groene kleur bij hover */
+  transform: translateY(-2px);
+}
+
+/* Hero Sectie knoppen */
+.hero-buttons a.btn-test {
+  background-color: #ff5722; /* Oranje kleur voor "Test Nu" knop */
+  color: #ffffff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons a.btn-test:hover {
+  background-color: #e64a19; /* Donkerder oranje bij hover */
+  transform: translateY(-5px);
+}
+
+/* Animaties */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsief Ontwerp */
+@media (max-width: 768px) {
+  /* Verwijder absolute positionering voor betere responsiviteit */
+  .navbar {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    background-color: transparent; /* Maak achtergrond transparant op kleine schermen */
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .features-grid,
+  .steps-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Aanpassing voor het logo op kleinere schermen */
+  .logo img {
+    height: 60px; /* Verklein het logo op kleinere schermen */
+  }
+
+  /* Aanpassingen voor de Hero Sectie knoppen */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-buttons a.btn-test {
+    width: 100%;
+  }
+}
