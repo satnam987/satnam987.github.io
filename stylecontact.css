@@ -1,0 +1,219 @@
+/* Algemene Stijlen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background-color: #1b1b1f;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  padding: 20px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-left: 40%;
+}
+
+.navbar {
+  float: right;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  transition: color 0.3s;
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  color: #72b4e0;
+  background-color: rgba(114, 180, 224, 0.2);
+}
+
+/* Contact Sectie */
+.contact-section {
+  background: #252839;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.contact-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  background: #333344;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-section form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 1.1em;
+}
+
+.form-group label i {
+  margin-right: 10px;
+  color: #4caf50;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #444455;
+  color: #ffffff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #555566;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  outline: none;
+}
+
+.contact-section button {
+  background: #4caf50;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+  width: 100%;
+}
+
+.contact-section button:hover {
+  background: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: #ffffff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+footer .social-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #72b4e0;
+}
+
+/* Responsief Ontwerp */
+@media (max-width: 768px) {
+  .navbar {
+    float: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+
+  .contact-section form {
+    padding: 30px;
+  }
+
+  .contact-section h2 {
+    font-size: 2em;
+  }
+
+  .contact-section p {
+    font-size: 1em;
+  }
+}
