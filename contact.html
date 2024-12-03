@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome voor iconen -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,7 +18,6 @@
     />
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
       <div class="container">
         <div class="logo">
@@ -39,7 +37,6 @@
       </div>
     </header>
 
-    <!-- Contacteer Ons Sectie -->
     <section class="contact-section">
       <div class="container">
         <h2>Contacteer Ons</h2>
@@ -48,7 +45,6 @@
           neemt zo snel mogelijk contact met je op.
         </p>
 
-        <!-- Bevestigingsbericht -->
         <div
           id="confirmation"
           class="confirmation-message"
@@ -58,7 +54,6 @@
           <p>We nemen zo snel mogelijk contact met je op.</p>
         </div>
 
-        <!-- Foutmelding -->
         <div id="error" class="error-message" style="display: none;">
           <h3>Oeps!</h3>
           <p>
@@ -89,9 +84,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="bericht"
-              ><i class="fas fa-comment-dots"></i> Bericht</label
-            >
+            <label for="bericht"><i class="fas fa-comment-dots"></i> Bericht</label>
             <textarea
               id="bericht"
               name="bericht"
@@ -107,7 +100,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="container">
         <p>&copy; 2024 AntiSec. Alle rechten voorbehouden.</p>
@@ -120,7 +112,6 @@
       </div>
     </footer>
 
-    <!-- JavaScript om bevestiging te tonen -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contactForm");
@@ -128,28 +119,17 @@
         const error = document.getElementById("error");
 
         form.addEventListener("submit", function (event) {
-          event.preventDefault(); // Voorkom de standaard form submission
+          event.preventDefault();
 
-          // Simuleer formulierverwerking (bijvoorbeeld een AJAX-aanvraag)
-          // Hier kun je een echte AJAX-aanvraag toevoegen als je backend hebt
-          // Voor dit voorbeeld tonen we gewoon het bevestigingsbericht
-
-          // Controleer of de velden zijn ingevuld (allemaal vereist, dus geen echte validatie nodig)
           const naam = document.getElementById("naam").value.trim();
           const email = document.getElementById("email").value.trim();
           const bericht = document.getElementById("bericht").value.trim();
 
           if (naam && email && bericht) {
-            // Verberg eventuele foutberichten
             error.style.display = "none";
-
-            // Toon het bevestigingsbericht
             confirmation.style.display = "block";
-
-            // Reset het formulier
             form.reset();
           } else {
-            // Toon het foutbericht
             confirmation.style.display = "none";
             error.style.display = "block";
           }
