@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(to right, #4ca1af, #007bff);
+  padding: 20px 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+.logo h1 {
+  display: none;
+}
+
+/* Navigatiebalk */
+.navbar {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: transparent;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Contact Sectie */
+.contact-section {
+  background: #f7f9fc;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+.contact-section p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Formulier Stijlen */
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.form-group label i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  background: #f7f9fc;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #eaf2fa;
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Knop Stijlen */
+.contact-section button {
+  background: #007bff;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.contact-section button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* Bevestigings- en Foutberichten */
+.confirmation-message,
+.error-message {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.confirmation-message {
+  background: #4caf50; /* Groen voor succes */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  background: #e74c3c; /* Rood voor fouten */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background: #f7f9fc;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+footer .social-links a {
+  color: #333;
+  margin: 0 10px;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #007bff;
+}
+
+/* Responsief Ontwerp */
+@media (max-width: 768px) {
+  .navbar {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .contact-section form {
+    padding: 20px;
+  }
+
+  .confirmation-message,
+  .error-message {
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
