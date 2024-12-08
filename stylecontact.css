@@ -1,4 +1,3 @@
-/* Algemene Stijlen */
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +6,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
-  background-color: #1b1b1f;
+  color: #333;
+  background-color: #fff;
   line-height: 1.6;
 }
 
@@ -22,7 +21,7 @@ body {
 
 /* Header */
 .header {
-  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  background: linear-gradient(to right, #4ca1af, #007bff);
   padding: 20px 0;
   position: relative;
   z-index: 1000;
@@ -41,14 +40,23 @@ body {
   border-radius: 10px;
 }
 
+.logo h1 {
+  display: none;
+}
+
+/* Navigatiebalk */
 .navbar {
-  float: right;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px 20px;
+  background: transparent;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
-  align-items: center;
 }
 
 .navbar ul li {
@@ -57,22 +65,21 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
   font-weight: 600;
-  transition: color 0.3s;
-  position: relative;
   padding: 8px 12px;
   border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
 }
 
 .navbar ul li a:hover {
-  color: #72b4e0;
-  background-color: rgba(114, 180, 224, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
 }
 
 /* Contact Sectie */
 .contact-section {
-  background: #252839;
+  background: #f7f9fc;
   padding: 60px 0;
   text-align: center;
 }
@@ -80,13 +87,13 @@ body {
 .contact-section h2 {
   font-size: 2em;
   margin-bottom: 40px;
-  color: #4caf50;
+  color: #007bff;
 }
 
 .contact-section p {
   font-size: 1.2em;
   margin-bottom: 30px;
-  color: #e0e0e0;
+  color: #555;
 }
 
 /* Formulier Stijlen */
@@ -94,10 +101,10 @@ body {
   max-width: 600px;
   margin: auto;
   text-align: left;
-  background: #333344;
+  background: #ffffff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -108,40 +115,41 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #333;
   font-size: 1.1em;
 }
 
 .form-group label i {
   margin-right: 10px;
-  color: #4caf50;
+  color: #007bff;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 12px 20px;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1em;
-  background: #444455;
-  color: #ffffff;
+  background: #f7f9fc;
+  color: #333;
   transition: background 0.3s, color 0.3s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-  background: #555566;
+  background: #eaf2fa;
   outline: none;
+  border-color: #007bff;
 }
 
 /* Knop Stijlen */
 .contact-section button {
-  background: #4caf50;
+  background: #007bff;
   color: #ffffff;
   padding: 15px 30px;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s, transform 0.3s;
@@ -149,7 +157,7 @@ body {
 }
 
 .contact-section button:hover {
-  background: #45a049;
+  background: #0056b3;
   transform: translateY(-3px);
 }
 
@@ -167,42 +175,42 @@ body {
 .confirmation-message {
   background: #4caf50; /* Groen voor succes */
   color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .error-message {
   background: #e74c3c; /* Rood voor fouten */
   color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
 footer {
-  background: #2c3e50;
-  color: #ffffff;
+  background: #f7f9fc;
+  color: #333;
   padding: 20px 0;
   text-align: center;
+  font-size: 0.9em;
 }
 
 footer .social-links a {
-  color: #ffffff;
+  color: #333;
   margin: 0 10px;
   font-size: 1.2em;
   transition: color 0.3s;
 }
 
 footer .social-links a:hover {
-  color: #72b4e0;
+  color: #007bff;
 }
 
 /* Responsief Ontwerp */
 @media (max-width: 768px) {
-  /* Verwijder absolute positionering voor betere responsiviteit */
   .navbar {
-    float: none;
-    text-align: center;
+    position: static;
+    transform: none;
     margin-top: 10px;
-    background-color: transparent; /* Maak achtergrond transparant op kleine schermen */
+    background-color: transparent;
     padding: 0;
     border-radius: 0;
   }
@@ -217,7 +225,6 @@ footer .social-links a:hover {
     margin-bottom: 10px;
   }
 
-  /* Aanpassingen voor de Formulier en Berichten */
   .contact-section form {
     padding: 20px;
   }
@@ -227,5 +234,9 @@ footer .social-links a:hover {
     margin: 10px auto;
     padding: 15px;
     font-size: 1em;
+  }
+
+  .logo img {
+    height: 50px;
   }
 }
