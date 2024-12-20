@@ -105,7 +105,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="container">
         <p>&copy; 2024 AntiSec. Alle rechten voorbehouden.</p>
@@ -118,7 +117,6 @@
       </div>
     </footer>
 
-    <!-- JavaScript om bevestiging te tonen -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const form = document.getElementById("contactForm");
@@ -128,26 +126,17 @@
         form.addEventListener("submit", function (event) {
           event.preventDefault(); // Voorkom de standaard form submission
 
-          // Simuleer formulierverwerking (bijvoorbeeld een AJAX-aanvraag)
-          // Hier kun je een echte AJAX-aanvraag toevoegen als je backend hebt
-          // Voor dit voorbeeld tonen we gewoon het bevestigingsbericht
-
-          // Controleer of de velden zijn ingevuld (allemaal vereist, dus geen echte validatie nodig)
           const naam = document.getElementById("naam").value.trim();
           const email = document.getElementById("email").value.trim();
           const bericht = document.getElementById("bericht").value.trim();
 
           if (naam && email && bericht) {
-            // Verberg eventuele foutberichten
             error.style.display = "none";
 
-            // Toon het bevestigingsbericht
             confirmation.style.display = "block";
 
-            // Reset het formulier
             form.reset();
           } else {
-            // Toon het foutbericht
             confirmation.style.display = "none";
             error.style.display = "block";
           }
