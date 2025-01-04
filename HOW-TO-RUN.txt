@@ -1,0 +1,4 @@
+1. Unzip the downloaded folder.
+2. Open the folder and navigate to the "Dist" directory.
+3. Run "Main.exe" from there.
+4. If Windows displays a warning, simply select "Run Anyway."
